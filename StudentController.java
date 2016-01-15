@@ -23,9 +23,9 @@ StudentController()
  
 {
 
-	 Student s1=new Student(1,"Ion","Automatica","331");
-     Student s2=new Student(2,"Adriana","Matematica","312");
-     Student s3=new Student(3,"Alexandra","Medicina","331");
+	 Student s1=new Student(1,"Ion","Automatica","333");
+     Student s2=new Student(2,"Ioana","Calculatoare","333");
+     Student s3=new Student(3,"Ionela","Automatica","334");
 
 
     studenti.add(s1);
@@ -92,7 +92,7 @@ StudentController()
       
 	  }
     
-    //Metoda PUT//
+    /* PUT */
     
     
       @RequestMapping(value="/student/{Id}/{Nume}/{Facultate}/{Grupa}", method = RequestMethod.PUT)
@@ -116,11 +116,11 @@ StudentController()
         }
           
   
-  	//Metoda POST//
+  	/* Post */
  
   @RequestMapping(value="/student", method = RequestMethod.POST)
   	public ResponseEntity create() {
-	 Student s4=new Student(4,"Paulina","Poli","331AA");
+	 Student s4=new Student(4,"Ionut","Calculatoare","334");
 	 studenti.add(s4);
    
        return new ResponseEntity<Student>(s4, new HttpHeaders(), HttpStatus.OK);
@@ -129,7 +129,7 @@ StudentController()
  
  
     
-   //Metoda DELETE//
+   /* DELETE */
       
    @RequestMapping(value="/student/{Id}", method = RequestMethod.DELETE)
    public ResponseEntity remove(@PathVariable("Id") int Id) {
